@@ -1,5 +1,5 @@
-geckodriver.log
+geckodrv/
 .venv
-geckodr
-superlists/superlists/__pycache__
+geckodriver.log
 superlists/db.sqlite3
+superlists/superlists/__pycache__
