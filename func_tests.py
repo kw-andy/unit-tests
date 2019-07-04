@@ -38,20 +38,20 @@ class NewVisitorTest(unittest.TestCase):
 		# to check out its homepage
 		self.browser.get('http://localhost:8000')	
 
-		# She notices the pae title and header mention to-do lists
-		self.assertIn('To do lists',self.browser.title)
-		header_text = self.browser.find_element_by_tag_name('h1').text
-		self.assertIn('To-Do', header_text)
+		self.assertIn('To-do',self.browser.title)
+		header_text = self.browser.find_element_by_tag_name('id_new_item')
+		#self.fail('Finish the test:')
+		self.assertIn('To-Do',header_text)
 
-		
-
-		# She is invited to enter a to-do item straight away
+		inputbox = self.browser.find_element_by_id('id_new_item')
+		self.assertEqual(
+			inputbox.get_attribute('placeholder'),
+			'Enter a to-do item'	
+		)
 
 		inputbox.send_keys('Buy peacock feathers')
 
-		# When she hits enter, the page updates and now the page lists
-		# "1: Buy peacock feathers" as an item in a to-do- list table
-
+#Functional test now checks we can input a to-do item
 		inputbox.send_keys(Keys.ENTER)
 		time.sleep(1)
 
@@ -60,11 +60,13 @@ class NewVisitorTest(unittest.TestCase):
 		self.assertTrue(
 			any(row.text == '1: Buy peacock feathers' for row in rows)
 			)
+
 		# There is still a text box inviting her to add another item. 
 		# She enters "Use peacock to make a fly"
 		# Edith is very methodical
 
 		self.fail('Finish the test!')
+
 
 if __name__ == '__main__':
 	unittest.main(warnings='ignore')			
