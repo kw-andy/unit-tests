@@ -5,3 +5,4 @@ superlists/db.sqlite3
 superlists/superlists/__pycache__
 lists/__pycache__/*.pyc
 lists/migrations/__pycache__/*.pyc
+superlists/lists/__pycache__/*.pyc
