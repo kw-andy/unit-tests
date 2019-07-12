@@ -21,7 +21,7 @@ from selenium.webdriver.common.keys import Keys
 import time
 import unittest
 
-print('toto')
+#print('toto')
 
 class NewVisitorTest(unittest.TestCase):
 
@@ -39,9 +39,9 @@ class NewVisitorTest(unittest.TestCase):
 		self.browser.get('http://localhost:8000')	
 
 		self.assertIn('To-do',self.browser.title)
-		header_text = self.browser.find_element_by_tag_name('id_new_item')
+		header_text = self.browser.find_element_by_tag_name('h1')
 		#self.fail('Finish the test:')
-		self.assertIn('To-Do',header_text)
+		self.assertIn('To-do',header_text)
 
 		inputbox = self.browser.find_element_by_id('id_new_item')
 		self.assertEqual(
