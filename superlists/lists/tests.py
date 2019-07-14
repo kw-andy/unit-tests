@@ -33,7 +33,7 @@ class HomePageTest(TestCase):
 		#html = response.content.decode('utf8')
 		#expected_html = render_to_string('home.html')
 		self.assertTrue(html.startswith('<html>'))
-		self.assertIn('<title>To do lists</title>',html)
+		self.assertIn('<title>To-do lists</title>',html)
 		#self.assertEqual(html,expected_html)
 		##self.assertTrue(html.endswith('</html>'))
 		self.assertTrue(html.strip().endswith('</html>'))
