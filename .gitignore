@@ -1,8 +1,8 @@
 geckodrv/
 .venv
 geckodriver.log
-superlists/db.sqlite3
-superlists/superlists/__pycache__
-lists/__pycache__/*.pyc
-lists/migrations/__pycache__/*.pyc
-superlists/lists/__pycache__/*.pyc
+db.sqlite3
+.idea/
+Test-Driven Development with Python - 95836888.pdf
+Test-Driven Development with Python - 95836888_43.png
+
