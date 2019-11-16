@@ -2,4 +2,5 @@
 
 - Going through all the chapters about it
 - 04/11/19 : p59
-- 16/11/19 : p65/25
+- 12/11/19 : p65/25
+- 16/11:19 : p77/37
