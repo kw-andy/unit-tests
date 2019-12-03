@@ -5,4 +5,9 @@ db.sqlite3
 .idea/
 Test-Driven Development with Python - 95836888.pdf
 Test-Driven Development with Python - 95836888_43.png
-
+lists/*pyc
+lists/__pycache__/*pyc
+lists/migrations/__pycache__/*pyc
+lists/__init__.py
+lists/migrations/__init__.py
+superlists/__pycache__/*pyc
