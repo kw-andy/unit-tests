@@ -31,6 +31,8 @@ class NewVisitorTest(unittest.TestCase):
 		inputbox.send_keys(Keys.ENTER)
 		time.sleep(1)
 
+		table = self.browser.find_element_by_id('id_list_table')
+
 		#find_element* == methods provided by selenium
 		#Keys == class that simulate keys like Enter
 
