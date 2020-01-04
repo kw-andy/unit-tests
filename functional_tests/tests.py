@@ -1,11 +1,12 @@
+from django.test import LiveServerTestCase
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
-import unittest
+
 
 #P81/P41
 
-class NewVisitorTest(unittest.TestCase):
+class NewVisitorTest(LiveServerTestCase):
 
 	def setUp(self):
 		self.browser = webdriver.Firefox() #ok
@@ -19,7 +20,7 @@ class NewVisitorTest(unittest.TestCase):
 		self.assertIn(row_text,[row.text for row in rows])	
 
 	def test_can_start_a_list_and_retrieve_it_later(self):
-		self.browser.get('http://localhost:8000') #ok
+		self.browser.get(self.live_server_url) #ok
 
 		self.assertIn('To-Do',self.browser.title)
 		header_text = self.browser.find_element_by_tag_name('h1').text
